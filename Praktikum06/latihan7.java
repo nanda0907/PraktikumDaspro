@@ -1,5 +1,7 @@
+package Praktikum06;
+
 import java.util.Scanner;
-public class flowchart2C {
+public class latihan7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int biayaPublikasi = 300000;
@@ -31,7 +33,7 @@ public class flowchart2C {
         String jawaban = sc.next();
 
         if (jawaban.equalsIgnoreCase("ya")) {
-            System.out.print("Masukkan persentase dana bantuan (misal 60 untuk 60%): ");
+            System.out.print("Masukkan persentase dana bantuan: ");
             persenBantuan = sc.nextDouble();
             danaPolinema = totalSemua * (persenBantuan / 100);
         } else {

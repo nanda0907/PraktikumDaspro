@@ -18,7 +18,7 @@ public class latihan5 {
         } else if (dayaListrik == 3500 || dayaListrik == 5500) {
             tarifListrik = 1700;
         } else {
-            System.out.println("Daya yang dimasukkan tidak valid!");
+            System.out.println("Daya listrik tidak tersedia!");
             return;
         }
 
@@ -37,10 +37,8 @@ public class latihan5 {
         pajak = biayaTetap * PPN;
         totalBiaya = biayaTetap + pajak;
 
-        System.out.println("Daya listrik: " + dayaListrik + " VA");
         System.out.println("Tarif per kWh: " + (int) tarifListrik);
         System.out.println("Biaya listrik: " + (int) biayaListrik);
-        System.out.println("PPN: " + (int) pajak);
-        System.out.println("Total Biaya      : Rp " + (int) totalBiaya);
+        System.out.println("Total biaya      : Rp " + (int) totalBiaya);
     }
 }
