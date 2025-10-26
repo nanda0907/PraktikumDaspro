@@ -14,6 +14,8 @@ public class flowchart2A {
         lamaSewa = sc.nextInt();
         System.out.print("Masukkan jarak tempuh: ");
         jarakTempuh = sc.nextInt();
+        System.out.print("Masukkan biaya supir: ");
+        biayaSupir = sc.nextInt();
 
         biayaSewa = 300000 * lamaSewa;
         biayaSupir = 200000 * lamaSewa;
@@ -22,7 +24,5 @@ public class flowchart2A {
 
         System.out.println("totalBiaya: Rp " + totalBiaya);
         System.out.println("Jarak Tempuh (km):  " + jarakTempuh);
-        
-
     } 
 }

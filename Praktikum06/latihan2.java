@@ -1,15 +1,14 @@
+package Praktikum06;
+
 import java.util.Scanner;
 
-public class flowchart2A {
-
+public class latihan2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int biayaSewa, biayaSupir, bahanBakar, lamaSewa, jarakTempuh, totalBiaya;
 
-        // int a = 5;
-        // int b = 3;
-        // a = b;
-  
+        int biayaSewa, biayaSupir, bahanBakar, lamaSewa, jarakTempuh;
+        double totalBiaya;
+
         System.out.print("\nMasukkan lama sewa: ");
         lamaSewa = sc.nextInt();
         System.out.print("Masukkan jarak tempuh: ");
@@ -22,7 +21,12 @@ public class flowchart2A {
         bahanBakar = 1000 * jarakTempuh;
         totalBiaya = biayaSewa + biayaSupir + bahanBakar;
 
+        if (totalBiaya > 2000000) {
+            totalBiaya = totalBiaya - (totalBiaya * 0.05);
+            System.out.println("Anda mendapatkan diskon 5%");
+        }
+
         System.out.println("totalBiaya: Rp " + totalBiaya);
         System.out.println("Jarak Tempuh (km):  " + jarakTempuh);
-    } 
+    }
 }
