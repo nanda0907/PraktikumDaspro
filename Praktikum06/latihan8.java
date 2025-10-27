@@ -6,62 +6,52 @@ public class latihan8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        int biayaCetak;
+        int totalBerat;
+        int biayaJilid;
         int halaman;
-        double biayaCetak, biayaJilid;
-        double ongkir, totalBiaya;
-        double beratTotal, beratKg;
-        double biayaPerHalaman = 200;
-        double beratPerLembar = 3; 
-        double beratCover = 0; 
-        double beratKemasan = 300; 
-        double ongkirPerKg = 15000;
+        int lembar;
+        int beratKertas;
+        int biayaOngkir;
+        int totalBiaya;
+        int biayaCover = 0;
+        int beratCover = 0;
         String jenisCover;
 
-        System.out.print("\nMasukkan jumlah halaman: ");
+        System.out.println("Masukkan jumlah halaman = ");
         halaman = sc.nextInt();
-        sc.nextLine(); 
 
-        System.out.print("Masukkan jenis cover (hard/soft): ");
-        jenisCover = sc.nextLine().toLowerCase();
+        System.out.println("Masukkan jenis cover (hard/soft) = ");
+        jenisCover = sc.next();
 
-        if (jenisCover.equals("hard")) {
-            biayaJilid = 20000;
+        if (jenisCover.equalsIgnoreCase("hard")) {
+            biayaCover = 20000;
             beratCover = 250;
-        } else if (jenisCover.equals("soft")) {
-            biayaJilid = 10000;
+        } else if (jenisCover.equalsIgnoreCase("soft")) {
+            biayaCover = 10000;
             beratCover = 100;
         } else {
-            System.out.println("Jenis cover tidak valid! Gunakan 'hard' atau 'soft'.");
+            System.out.println("Jenis cover tidak ditemukan");
             return;
         }
+        
+        biayaCetak = halaman * 200;
 
-        double lembar = halaman / 2.0;
-        if (lembar > (int) lembar) {
-            lembar = (int) lembar + 1;
+        lembar = halaman / 2;
+        if (halaman % 2 != 0) {
+            lembar = lembar + 1;
         }
 
-        beratTotal = (lembar * beratPerLembar) + beratCover + beratKemasan;
-
-       
-        beratKg = beratTotal / 1000.0;
-        if (beratKg > (int) beratKg) {
-            beratKg = (int) beratKg + 1;
+        beratKertas = lembar * 3;
+        totalBerat = beratKertas + beratCover + 300;
+        int beratKg = totalBerat / 1000;
+        if (totalBerat % 1000 != 0) {
+            beratKg = beratKg + 1;
         }
+        biayaOngkir = beratKg * 15000;
+        biayaJilid = biayaCover;
+        totalBiaya = biayaCetak + biayaJilid + biayaOngkir;
 
-        biayaCetak = halaman * biayaPerHalaman;
-        ongkir = beratKg * ongkirPerKg;
-
-      
-        totalBiaya = biayaCetak + biayaJilid + ongkir;
-
-        System.out.println("Jumlah halaman : " + halaman);
-        System.out.println("Jenis cover    : " + jenisCover + " cover");
-        System.out.println("Jumlah lembar  : " + (int) lembar);
-        System.out.println("Berat total    : " + beratTotal + " gram");
-        System.out.println("Berat (kg)     : " + (int) beratKg + " kg");
-        System.out.println("Biaya cetak    : Rp " + (int) biayaCetak);
-        System.out.println("Biaya jilid    : Rp " + (int) biayaJilid);
-        System.out.println("Ongkir         : Rp " + (int) ongkir);
-        System.out.println("TOTAL BIAYA    : Rp " + (int) totalBiaya);
+        System.out.println("Total biaya cetak = Rp " + totalBiaya);
     }
 }
