@@ -1,5 +1,7 @@
 package Jobsheet07;
+
 import java.util.Scanner;
+
 public class KafeDoWhile04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -26,7 +28,7 @@ public class KafeDoWhile04 {
 
             totalHarga = (kopi * hargaKopi) + (teh * hargaTeh) + (roti * hargaRoti);
             System.out.println("Total harga yang harus dibayar: Rp " + totalHarga);
-            sc.nextLine(); 
+            sc.nextLine();
         } while (true);
 
         System.out.println("Semua transaksi selesai. Terima kasih!");
