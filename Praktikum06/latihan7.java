@@ -10,7 +10,7 @@ public class latihan7 {
         int hadiah = 4000000;
         int biayaOperasional = 500000;
         int konsumsiPeserta;
-        int honororium;
+        int honor;
         int jumlahTim;
         int jumlahPeserta = 3;
         int biayaPendaftaran = 50000;
@@ -25,9 +25,9 @@ public class latihan7 {
 
         jumlahPeserta = jumlahTim * 3;
         konsumsiPeserta = jumlahPeserta * 25000;
-        honororium = jumlahTim * 75000;
+        honor = jumlahTim * 75000;
         totalAnggaran = biayaPublikasi + dekorasi + konsumsiPJ + hadiah + biayaOperasional + konsumsiPeserta;
-        totalSemua = totalAnggaran + honororium;
+        totalSemua = totalAnggaran + honor;
 
         System.out.print("Apakah Polinema memberi dana bantuan? (ya/tidak): ");
         String jawaban = sc.next();
