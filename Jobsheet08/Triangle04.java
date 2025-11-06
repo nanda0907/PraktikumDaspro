@@ -13,10 +13,10 @@ public class Triangle04 {
             int j = 0;
 
             while (j < i) {
-                System.out.print(" * ");
+                System.out.print("*");
                 j++;
             }
-            
+            System.out.println();
             i++;
         }
     }
